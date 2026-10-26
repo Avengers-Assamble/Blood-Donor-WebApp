@@ -20,12 +20,13 @@
     <div class="eyebrow">Sign in</div>
     <h2>Welcome back</h2>
     <p class="sub">Use the email you registered with.</p>
-    <form action="home.html">
-      <div class="field"><label>Email address <span class="req">*</span></label><input type="email" class="input" required></div>
-      <div class="field"><label>Password <span class="req">*</span></label><input type="password" class="input" required></div>
-      <button class="btn btn-primary btn-block">Sign in &rarr;</button>
-      <p class="center small-muted" style="margin-top:14px">New to Lifeline? <a href="register.html"><b>Create an account</b></a></p>
-    </form>
+    <form id="loginForm">
+  <div class="field"><label>Email address <span class="req">*</span></label><input id="email" type="email" class="input" required></div>
+  <div class="field"><label>Password <span class="req">*</span></label><input id="password" type="password" class="input" required></div>
+  <p id="formMessage" role="alert" style="font-size:13px;min-height:18px;margin:0 0 8px"></p>
+  <button id="submitBtn" class="btn btn-primary btn-block">Sign in &rarr;</button>
+  <p class="center small-muted" style="margin-top:14px">New to Lifeline? <a href="register.html"><b>Create an account</b></a></p>
+</form>
   </section>
 </main><footer class="footer"><span>&copy; 2026 Lifeline. A little of you. A lifeline for someone.</span><span><a href="#">Privacy policy</a><a href="#">Terms of use</a><a href="#">Get support</a></span></footer>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
