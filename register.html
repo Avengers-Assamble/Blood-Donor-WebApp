@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account - Lifeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<header class="topbar"><div class="inner"><a class="logo" href="index.html"><span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M12 2.5c3.2 4.2 6.3 7.3 6.3 11.4a6.3 6.3 0 0 1-12.6 0c0-4.1 3.1-7.2 6.3-11.4z"/></svg></span>lifeline</a><div class="menu"><a href="index.html" class="active">Home</a><a href="index.html#how">How it works</a><a href="index.html#guide">Donation guide</a><a href="index.html#about">About us</a></div><div class="right"><a href="login.html" style="color:var(--ink);font-weight:600;font-size:13px">Sign in</a><a class="btn btn-primary btn-sm" href="register.html">Join the community</a></div></div></header>
+<main class="split">
+  <section>
+    <div class="eyebrow">&#9825; People helping people</div>
+    <h1>Every connection carries hope.</h1>
+    <p class="lead">Join a community that brings blood donors and people in need a little closer. Your next step could make a meaningful difference.</p>
+    <div class="photo">Add your photo here (export it from Figma)</div>
+    <div class="avatars"><div class="stack"><span>AP</span><span>NS</span><span>RK</span></div>
+      <div><b>Different people. One shared purpose.</b><small>A caring community, built one connection at a time.</small></div></div>
+  </section>
+  <section class="card signup">
+    <div class="eyebrow">First, let's get to know you</div>
+    <h2>Create your account</h2>
+    <p class="sub">One account to give help or find it when you need it.</p>
+    <form action="home.html">
+      <div class="grid-2">
+        <div class="field"><label>First name <span class="req">*</span></label><input class="input" placeholder="Aarav" required></div>
+        <div class="field"><label>Last name <span class="req">*</span></label><input class="input" placeholder="Patel" required></div>
+      </div>
+      <div class="field"><label>Email address <span class="req">*</span></label><input type="email" class="input" placeholder="aarav.patel@example.com" required></div>
+      <div class="field"><label>Mobile number <span class="req">*</span></label><input type="tel" class="input" pattern="[0-9+ ]{10,15}" placeholder="+91 98765 43210" required><div class="hint">Used only for account and donation-related communication.</div></div>
+      <div class="field"><label>Password <span class="req">*</span></label><input type="password" class="input" minlength="8" required><div class="hint">Use at least 8 characters, including a number and a symbol.</div></div>
+      <div class="field"><label>Confirm password <span class="req">*</span></label><input type="password" class="input" required></div>
+      <label class="check"><input type="checkbox" required> I agree to the Terms of use and Privacy policy, including how my information is used to coordinate requests.</label>
+      <button class="btn btn-primary btn-block" style="margin-top:6px">Create account &rarr;</button>
+      <p class="center small-muted" style="margin-top:14px">Already part of Lifeline? <a href="login.html"><b>Sign in</b></a></p>
+      <p class="center small-muted" style="margin-top:8px">Your personal details stay protected.</p>
+    </form>
+  </section>
+</main><footer class="footer"><span>&copy; 2026 Lifeline. A little of you. A lifeline for someone.</span><span><a href="#">Privacy policy</a><a href="#">Terms of use</a><a href="#">Get support</a></span></footer>
+<script src="script.js"></script>
+</body>
+</html>
