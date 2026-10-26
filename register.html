@@ -22,20 +22,21 @@
     <div class="eyebrow">First, let's get to know you</div>
     <h2>Create your account</h2>
     <p class="sub">One account to give help or find it when you need it.</p>
-    <form action="home.html">
-      <div class="grid-2">
-        <div class="field"><label>First name <span class="req">*</span></label><input class="input" placeholder="Aarav" required></div>
-        <div class="field"><label>Last name <span class="req">*</span></label><input class="input" placeholder="Patel" required></div>
-      </div>
-      <div class="field"><label>Email address <span class="req">*</span></label><input type="email" class="input" placeholder="aarav.patel@example.com" required></div>
-      <div class="field"><label>Mobile number <span class="req">*</span></label><input type="tel" class="input" pattern="[0-9+ ]{10,15}" placeholder="+91 98765 43210" required><div class="hint">Used only for account and donation-related communication.</div></div>
-      <div class="field"><label>Password <span class="req">*</span></label><input type="password" class="input" minlength="8" required><div class="hint">Use at least 8 characters, including a number and a symbol.</div></div>
-      <div class="field"><label>Confirm password <span class="req">*</span></label><input type="password" class="input" required></div>
-      <label class="check"><input type="checkbox" required> I agree to the Terms of use and Privacy policy, including how my information is used to coordinate requests.</label>
-      <button class="btn btn-primary btn-block" style="margin-top:6px">Create account &rarr;</button>
-      <p class="center small-muted" style="margin-top:14px">Already part of Lifeline? <a href="login.html"><b>Sign in</b></a></p>
-      <p class="center small-muted" style="margin-top:8px">Your personal details stay protected.</p>
-    </form>
+    <form id="registerForm">
+  <div class="grid-2">
+    <div class="field"><label>First name <span class="req">*</span></label><input id="firstName" class="input" placeholder="Aarav" required></div>
+    <div class="field"><label>Last name <span class="req">*</span></label><input id="lastName" class="input" placeholder="Patel" required></div>
+  </div>
+  <div class="field"><label>Email address <span class="req">*</span></label><input id="email" type="email" class="input" placeholder="aarav.patel@example.com" required></div>
+  <div class="field"><label>Mobile number <span class="req">*</span></label><input id="phone" type="tel" class="input" pattern="[0-9+ ]{10,15}" placeholder="+91 98765 43210" required><div class="hint">Used only for account and donation-related communication.</div></div>
+  <div class="field"><label>Password <span class="req">*</span></label><input id="password" type="password" class="input" minlength="8" required><div class="hint">Use at least 8 characters, including a number and a symbol.</div></div>
+  <div class="field"><label>Confirm password <span class="req">*</span></label><input id="confirmPassword" type="password" class="input" required></div>
+  <label class="check"><input id="terms" type="checkbox" required> I agree to the Terms of use and Privacy policy, including how my information is used to coordinate requests.</label>
+  <p id="formMessage" role="alert" style="font-size:13px;min-height:18px;margin:8px 0 0"></p>
+  <button id="submitBtn" class="btn btn-primary btn-block" style="margin-top:6px">Create account &rarr;</button>
+  <p class="center small-muted" style="margin-top:14px">Already part of Lifeline? <a href="login.html"><b>Sign in</b></a></p>
+  <p class="center small-muted" style="margin-top:8px">Your personal details stay protected.</p>
+</form>
   </section>
 </main><footer class="footer"><span>&copy; 2026 Lifeline. A little of you. A lifeline for someone.</span><span><a href="#">Privacy policy</a><a href="#">Terms of use</a><a href="#">Get support</a></span></footer>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
