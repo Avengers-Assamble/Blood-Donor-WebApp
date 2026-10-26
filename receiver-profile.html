@@ -20,51 +20,52 @@
     <div class="note"><strong>Coordinated with your care team</strong>Blood type, quantity and timing should be confirmed by the treating hospital.</div>
     <div class="help"><b>&#9711; We're here to help</b><p>Questions about your profile? Our community team can guide you.</p><a href="#">Contact support &#8599;</a></div>
   </aside>
-  <form class="main-card" action="banks.html">
+  <form class="main-card" id="receiverForm">
     <div class="title-row"><h2>Create a blood request</h2><span class="small-muted">* Required fields</span></div>
     <div class="sec">
       <div class="sec-head"><span class="no">01</span><h3>Patient details<small>You can create a request for yourself or someone you care for.</small></h3></div>
       <div class="grid-3">
-        <div class="field"><label>Patient's full name <span class="req">*</span></label><input class="input" value="Meera Patel" required></div>
-        <div class="field"><label>Patient's age <span class="req">*</span></label><input type="number" min="0" max="120" class="input" value="54" required></div>
-        <div class="field"><label>Your relationship <span class="req">*</span></label><select class="input"><option>Family member</option><option>Myself</option><option>Friend</option><option>Care worker</option></select></div>
+        <div class="field"><label>Patient's full name <span class="req">*</span></label><input class="input" id="patientName" required></div>
+        <div class="field"><label>Patient's age <span class="req">*</span></label><input type="number" min="0" max="120" class="input" id="patientAge" required></div>
+        <div class="field"><label>Your relationship <span class="req">*</span></label><select class="input" id="relationship"><option>Family member</option><option>Myself</option><option>Friend</option><option>Care worker</option></select></div>
       </div>
     </div>
     <div class="sec">
       <div class="sec-head"><span class="no">02</span><h3>Blood request details<small>Use the information provided by the treating hospital.</small></h3></div>
       <div class="grid-3">
-        <div class="field"><label>Blood group <span class="req">*</span></label><select class="input" required><option>O positive (O+)</option><option>A positive (A+)</option><option>A negative (A-)</option><option>B positive (B+)</option><option>B negative (B-)</option><option>AB positive (AB+)</option><option>AB negative (AB-)</option><option>O negative (O-)</option></select></div>
-        <div class="field"><label>Component required <span class="req">*</span></label><select class="input"><option>Packed red cells</option><option>Whole blood</option><option>Platelets</option><option>Plasma</option></select></div>
-        <div class="field"><label>Units requested <span class="req">*</span></label><select class="input"><option>1 unit</option><option selected>2 units</option><option>3 units</option><option>4 units</option></select></div>
+        <div class="field"><label>Blood group <span class="req">*</span></label><select class="input" id="bloodGroup" required><option value="O+">O positive (O+)</option><option value="A+">A positive (A+)</option><option value="A-">A negative (A-)</option><option value="B+">B positive (B+)</option><option value="B-">B negative (B-)</option><option value="AB+">AB positive (AB+)</option><option value="AB-">AB negative (AB-)</option><option value="O-">O negative (O-)</option></select></div>
+        <div class="field"><label>Component required <span class="req">*</span></label><select class="input" id="component"><option>Packed red cells</option><option>Whole blood</option><option>Platelets</option><option>Plasma</option></select></div>
+        <div class="field"><label>Units requested <span class="req">*</span></label><select class="input" id="units"><option value="1">1 unit</option><option value="2" selected>2 units</option><option value="3">3 units</option><option value="4">4 units</option></select></div>
       </div>
       <div class="grid-2">
-        <div class="field"><label>Hospital / blood bank <span class="req">*</span></label><input class="input" value="Manipal Hospital, Old Airport Road" required></div>
-        <div class="field"><label>Required by <span class="req">*</span></label><input type="date" class="input" value="2026-10-28" required></div>
+        <div class="field"><label>Hospital / blood bank <span class="req">*</span></label><input class="input" id="hospitalName" required></div>
+        <div class="field"><label>Required by <span class="req">*</span></label><input type="date" class="input" id="requiredBy" required></div>
       </div>
       <div class="grid-2">
-        <div class="field"><label>City <span class="req">*</span></label><select class="input" required><option selected>Bengaluru</option><option>Delhi</option><option>Mumbai</option><option>Pune</option><option>Chennai</option><option>Kolkata</option><option>Lucknow</option></select></div>
-        <div class="field"><label>Hospital reference ID</label><input class="input" value="MH-BLR-28416"><div class="hint">Optional. Shared only with the review team.</div></div>
+        <div class="field"><label>City <span class="req">*</span></label><select class="input" id="city" required><option selected>Bengaluru</option><option>Delhi</option><option>Mumbai</option><option>Pune</option><option>Chennai</option><option>Kolkata</option><option>Lucknow</option></select></div>
+        <div class="field"><label>Hospital reference ID</label><input class="input" id="hospitalRef"><div class="hint">Optional. Shared only with the review team.</div></div>
       </div>
       <div class="file"><div><b>Hospital blood requisition.pdf</b><small>PDF &middot; 248 KB &middot; Uploaded for private review</small></div><a href="#"><b>Replace</b></a></div>
     </div>
     <div class="sec">
       <div class="sec-head"><span class="no">03</span><h3>Contact &amp; consent</h3></div>
       <div class="grid-3">
-        <div class="field"><label>Contact person <span class="req">*</span></label><input class="input" value="Aarav Patel" required></div>
-        <div class="field"><label>Mobile number <span class="req">*</span></label><input type="tel" class="input" value="+91 98765 43210" required></div>
-        <div class="field"><label>Account email <span class="req">*</span></label><input type="email" class="input" value="aarav.patel@example.com" required></div>
+        <div class="field"><label>Contact person <span class="req">*</span></label><input class="input" id="contactName" required></div>
+        <div class="field"><label>Mobile number <span class="req">*</span></label><input type="tel" class="input" id="contactPhone" required></div>
+        <div class="field"><label>Account email <span class="req">*</span></label><input type="email" class="input" id="contactEmail" readonly required></div>
       </div>
-      <label class="check"><input type="checkbox" checked required> I have the patient's permission to share these details and consent to being contacted by authorized coordinators. I confirm that the request reflects the hospital's instructions.</label>
+      <label class="check"><input type="checkbox" id="consent" required> I have the patient's permission to share these details and consent to being contacted by authorized coordinators. I confirm that the request reflects the hospital's instructions.</label>
       <div class="warn"><strong>For urgent care, contact your hospital directly</strong>Submitting a request does not guarantee blood availability. Your hospital or blood bank will confirm compatibility and coordinate all clinical decisions.</div>
     </div>
+    <div id="formMessage" style="display:none;margin:12px 0;font-size:14px"></div>
     <div class="form-foot"><span class="small-muted">Requests are reviewed before sharing.</span>
-      <div class="btns"><button type="button" class="btn btn-outline">Save draft</button><button class="btn btn-primary">Submit blood request &rarr;</button></div></div>
+      <div class="btns"><button type="button" class="btn btn-outline">Save draft</button><button type="submit" class="btn btn-primary" id="submitBtn">Submit blood request &rarr;</button></div></div>
   </form>
 </div><footer class="footer"><span>&copy; 2026 Lifeline. A little of you. A lifeline for someone.</span><span><a href="#">Privacy policy</a><a href="#">Terms of use</a><a href="#">Get support</a></span></footer>
-<script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="supabase.js"></script>
   <script src="auth.js"></script>
   <script src="script.js"></script>
+  <script src="receiver.js"></script>
 </body>
 </html>
