@@ -20,47 +20,48 @@
     <div class="note"><strong>A profile, not an eligibility check</strong>The donation center will review your health and confirm eligibility before any donation.</div>
     <div class="help"><b>&#9711; We're here to help</b><p>Questions about your profile? Our community team can guide you.</p><a href="#">Contact support &#8599;</a></div>
   </aside>
-  <form class="main-card" action="thank-you.html">
+  <form class="main-card" id="donorForm">
     <div class="title-row"><h2>Build your donor profile</h2><span class="small-muted">* Required fields</span></div>
     <div class="sec">
       <div class="sec-head"><span class="no">01</span><h3>Personal details<small>Your account details are prefilled. Update them if needed.</small></h3></div>
       <div class="grid-3">
-        <div class="field"><label>Full name <span class="req">*</span></label><input class="input" value="Aarav Patel" required></div>
-        <div class="field"><label>Date of birth <span class="req">*</span></label><input type="date" class="input" value="1996-06-14" required></div>
-        <div class="field"><label>Gender</label><select class="input"><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option></select></div>
+        <div class="field"><label>Full name <span class="req">*</span></label><input class="input" id="fullName" required></div>
+        <div class="field"><label>Date of birth <span class="req">*</span></label><input type="date" class="input" id="dob" required></div>
+        <div class="field"><label>Gender</label><select class="input" id="gender"><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option></select></div>
       </div>
       <div class="grid-2">
-        <div class="field"><label>Email address <span class="req">*</span></label><input type="email" class="input" value="aarav.patel@example.com" required></div>
-        <div class="field"><label>Mobile number <span class="req">*</span></label><input type="tel" class="input" value="+91 98765 43210" required></div>
+        <div class="field"><label>Email address <span class="req">*</span></label><input type="email" class="input" id="email" readonly required></div>
+        <div class="field"><label>Mobile number <span class="req">*</span></label><input type="tel" class="input" id="phone" required></div>
       </div>
     </div>
     <div class="sec">
       <div class="sec-head"><span class="no">02</span><h3>Donation details<small>Help care teams understand where and when to contact you.</small></h3></div>
       <div class="grid-3">
-        <div class="field"><label>Blood group <span class="req">*</span></label><select class="input" required><option>O positive (O+)</option><option>A positive (A+)</option><option>A negative (A-)</option><option>B positive (B+)</option><option>B negative (B-)</option><option>AB positive (AB+)</option><option>AB negative (AB-)</option><option>O negative (O-)</option></select></div>
-        <div class="field"><label>Last donation date</label><input type="date" class="input"></div>
-        <div class="field"><label>Availability <span class="req">*</span></label><select class="input"><option>Open to requests</option><option>Available on weekends</option><option>Not available now</option></select></div>
+        <div class="field"><label>Blood group <span class="req">*</span></label><select class="input" id="bloodGroup" required><option value="O+">O positive (O+)</option><option value="A+">A positive (A+)</option><option value="A-">A negative (A-)</option><option value="B+">B positive (B+)</option><option value="B-">B negative (B-)</option><option value="AB+">AB positive (AB+)</option><option value="AB-">AB negative (AB-)</option><option value="O-">O negative (O-)</option></select></div>
+        <div class="field"><label>Last donation date</label><input type="date" class="input" id="lastDonation"></div>
+        <div class="field"><label>Availability <span class="req">*</span></label><select class="input" id="availability"><option value="open">Open to requests</option><option value="weekends">Available on weekends</option><option value="not_now">Not available now</option></select></div>
       </div>
       <div class="grid-3">
-        <div class="field"><label>City <span class="req">*</span></label><select class="input" required><option selected>Bengaluru</option><option>Delhi</option><option>Mumbai</option><option>Pune</option><option>Chennai</option><option>Kolkata</option><option>Lucknow</option></select></div>
-        <div class="field"><label>Area / locality <span class="req">*</span></label><input class="input" value="Indiranagar" required></div>
-        <div class="field"><label>PIN code <span class="req">*</span></label><input class="input" value="560038" pattern="[0-9]{6}" required></div>
+        <div class="field"><label>City <span class="req">*</span></label><select class="input" id="city" required><option selected>Bengaluru</option><option>Delhi</option><option>Mumbai</option><option>Pune</option><option>Chennai</option><option>Kolkata</option><option>Lucknow</option></select></div>
+        <div class="field"><label>Area / locality <span class="req">*</span></label><input class="input" id="locality" required></div>
+        <div class="field"><label>PIN code <span class="req">*</span></label><input class="input" id="pinCode" pattern="[0-9]{6}" required></div>
       </div>
       <div class="warn"><strong>Not sure about your blood group or donation history?</strong>Only enter details you know. A donation center will confirm your blood group and assess eligibility. Leave the last donation date blank if this is your first donation.</div>
     </div>
     <div class="sec">
       <div class="sec-head"><span class="no">03</span><h3>Contact preferences &amp; consent</h3></div>
-      <div class="grid-2"><label class="check"><input type="checkbox" checked> Contact me by phone</label><label class="check"><input type="checkbox"> Send me email updates</label></div>
-      <label class="check"><input type="checkbox" checked required> I consent to sharing my name, blood group, locality and contact number with authorized care coordinators for donation requests. I can change my availability at any time.</label>
+      <div class="grid-2"><label class="check"><input type="checkbox" id="byPhone" checked> Contact me by phone</label><label class="check"><input type="checkbox" id="byEmail"> Send me email updates</label></div>
+      <label class="check"><input type="checkbox" id="consent" required> I consent to sharing my name, blood group, locality and contact number with authorized care coordinators for donation requests. I can change my availability at any time.</label>
     </div>
+    <div id="formMessage" style="display:none;margin:12px 0;font-size:14px"></div>
     <div class="form-foot"><span class="small-muted">Your profile is visible after review.</span>
-      <div class="btns"><button type="button" class="btn btn-outline">Save draft</button><button class="btn btn-primary">Submit donor profile &rarr;</button></div></div>
+      <div class="btns"><button type="button" class="btn btn-outline">Save draft</button><button type="submit" class="btn btn-primary" id="submitBtn">Submit donor profile &rarr;</button></div></div>
   </form>
 </div><footer class="footer"><span>&copy; 2026 Lifeline. A little of you. A lifeline for someone.</span><span><a href="#">Privacy policy</a><a href="#">Terms of use</a><a href="#">Get support</a></span></footer>
-<script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="supabase.js"></script>
   <script src="auth.js"></script>
   <script src="script.js"></script>
+  <script src="donor.js"></script>
 </body>
 </html>
