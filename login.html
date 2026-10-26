@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in - Lifeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<header class="topbar"><div class="inner"><a class="logo" href="index.html"><span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M12 2.5c3.2 4.2 6.3 7.3 6.3 11.4a6.3 6.3 0 0 1-12.6 0c0-4.1 3.1-7.2 6.3-11.4z"/></svg></span>lifeline</a><div class="menu"><a href="index.html" class="active">Home</a><a href="index.html#how">How it works</a><a href="index.html#guide">Donation guide</a><a href="index.html#about">About us</a></div><div class="right"><a href="login.html" style="color:var(--ink);font-weight:600;font-size:13px">Sign in</a><a class="btn btn-primary btn-sm" href="register.html">Join the community</a></div></div></header>
+<main class="split">
+  <section>
+    <div class="eyebrow">&#9825; Welcome back</div>
+    <h1>Good to see you again.</h1>
+    <p class="lead">Sign in to update your profile, respond to requests or find support from your community.</p>
+    <div class="photo">Add your photo here (export it from Figma)</div>
+  </section>
+  <section class="card signup">
+    <div class="eyebrow">Sign in</div>
+    <h2>Welcome back</h2>
+    <p class="sub">Use the email you registered with.</p>
+    <form action="home.html">
+      <div class="field"><label>Email address <span class="req">*</span></label><input type="email" class="input" required></div>
+      <div class="field"><label>Password <span class="req">*</span></label><input type="password" class="input" required></div>
+      <button class="btn btn-primary btn-block">Sign in &rarr;</button>
+      <p class="center small-muted" style="margin-top:14px">New to Lifeline? <a href="register.html"><b>Create an account</b></a></p>
+    </form>
+  </section>
+</main><footer class="footer"><span>&copy; 2026 Lifeline. A little of you. A lifeline for someone.</span><span><a href="#">Privacy policy</a><a href="#">Terms of use</a><a href="#">Get support</a></span></footer>
+<script src="script.js"></script>
+</body>
+</html>

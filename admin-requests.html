@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blood requests - Lifeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="logo" href="admin-users.html"><span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M12 2.5c3.2 4.2 6.3 7.3 6.3 11.4a6.3 6.3 0 0 1-12.6 0c0-4.1 3.1-7.2 6.3-11.4z"/></svg></span>lifeline</a><div class="sub">Community admin</div>
+    <nav><a href="#">Overview</a><a href="admin-users.html">Users</a><a href="admin-requests.html" class="active">Blood requests</a><a href="admin-review.html">Review queue<span class="count">12</span></a><a href="admin-banks.html">Blood banks</a><a href="#">Activity log</a><a href="#">Settings</a></nav>
+    <div class="care"><b>Handle with care</b>Access personal information only when needed for community coordination.<br><a href="#"><b>View privacy guidelines &#8599;</b></a></div>
+  </aside>
+  <div class="admin-main">
+    <div class="admin-top"><div class="left">Bengaluru community <span class="live">Live</span></div>
+      <div class="right"><a href="index.html" class="small-muted">View website &#8599;</a><svg class="bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0c0 6 2 7 2 7H4s2-1 2-7zM10 20a2 2 0 0 0 4 0"/></svg><div class="user"><span class="avatar">SK</span><span class="who">Sara Kapoor<small>Administrator</small></span></div></div></div>
+    <div class="admin-body">
+      <div class="admin-title"><div><h1>Blood requests</h1><p>Track every request shared with the community.</p></div></div>
+      
+<div class="panel"><div class="toolbar"><input class="input grow" data-search=".panel" placeholder="Search patient, hospital or blood group"></div>
+  <div class="table-wrap"><table class="data"><thead><tr><th>Patient</th><th>Blood</th><th>Units</th><th>Hospital</th><th>Required by</th><th>Status</th></tr></thead><tbody><tr><td><b>Meera Patel</b></td><td class="blood">O+</td><td>2 units</td><td>Manipal Hospital</td><td>28 Oct 2026</td><td><span class="pill pill-wait">Pending review</span></td></tr><tr><td><b>Imran Khan</b></td><td class="blood">O-</td><td>1 unit</td><td>St. John's Hospital</td><td>27 Oct 2026</td><td><span class="pill pill-wait">Pending review</span></td></tr><tr><td><b>Nisha Rao</b></td><td class="blood">B+</td><td>3 units</td><td>Columbia Asia</td><td>26 Oct 2026</td><td><span class="pill pill-ok">Verified</span></td></tr><tr><td><b>Karan Nair</b></td><td class="blood">A+</td><td>2 units</td><td>Fortis Hospital</td><td>25 Oct 2026</td><td><span class="pill pill-ok">Verified</span></td></tr></tbody></table></div>
+  <div class="table-foot"><span>Showing 1-4 of 31 active requests</span></div></div>
+    </div>
+    <div class="admin-note">Restricted admin access. Account credentials are never displayed. All community management actions are logged.</div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donor profile - Lifeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<header class="topbar"><div class="inner"><a class="logo" href="home.html"><span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M12 2.5c3.2 4.2 6.3 7.3 6.3 11.4a6.3 6.3 0 0 1-12.6 0c0-4.1 3.1-7.2 6.3-11.4z"/></svg></span>lifeline</a><div class="menu"><a href="home.html" class="active">Home</a><a href="index.html#how">How it works</a><a href="index.html#guide">Donation guide</a><a href="index.html#about">About us</a></div><div class="right"><svg class="bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0c0 6 2 7 2 7H4s2-1 2-7zM10 20a2 2 0 0 0 4 0"/></svg><div class="user"><span class="avatar">AP</span>Aarav Patel</div></div></div></header>
+<div class="profile-layout" style="padding-bottom:0;grid-template-columns:1fr"><div>
+  <div class="crumb">Home &rsaquo; <span style="color:var(--wine)">Donor profile</span></div>
+  <div class="profile-head"><div><h1>Your kindness starts here.</h1><p>Complete your donor profile so local care teams can reach you.</p></div>
+    <div class="switch"><a class="on" href="donor-profile.html">Be a donor</a><a href="receiver-profile.html">Find blood</a></div></div>
+</div></div>
+<div class="profile-layout" style="padding-top:0">
+  <aside class="side">
+    <div class="box"><div class="label">Your donor profile</div><ol><li class="on"><i>1</i>Personal details</li><li><i>2</i>Donation details</li><li><i>3</i>Contact &amp; consent</li></ol></div>
+    <div class="note"><strong>A profile, not an eligibility check</strong>The donation center will review your health and confirm eligibility before any donation.</div>
+    <div class="help"><b>&#9711; We're here to help</b><p>Questions about your profile? Our community team can guide you.</p><a href="#">Contact support &#8599;</a></div>
+  </aside>
+  <form class="main-card" action="thank-you.html">
+    <div class="title-row"><h2>Build your donor profile</h2><span class="small-muted">* Required fields</span></div>
+    <div class="sec">
+      <div class="sec-head"><span class="no">01</span><h3>Personal details<small>Your account details are prefilled. Update them if needed.</small></h3></div>
+      <div class="grid-3">
+        <div class="field"><label>Full name <span class="req">*</span></label><input class="input" value="Aarav Patel" required></div>
+        <div class="field"><label>Date of birth <span class="req">*</span></label><input type="date" class="input" value="1996-06-14" required></div>
+        <div class="field"><label>Gender</label><select class="input"><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option></select></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label>Email address <span class="req">*</span></label><input type="email" class="input" value="aarav.patel@example.com" required></div>
+        <div class="field"><label>Mobile number <span class="req">*</span></label><input type="tel" class="input" value="+91 98765 43210" required></div>
+      </div>
+    </div>
+    <div class="sec">
+      <div class="sec-head"><span class="no">02</span><h3>Donation details<small>Help care teams understand where and when to contact you.</small></h3></div>
+      <div class="grid-3">
+        <div class="field"><label>Blood group <span class="req">*</span></label><select class="input" required><option>O positive (O+)</option><option>A positive (A+)</option><option>A negative (A-)</option><option>B positive (B+)</option><option>B negative (B-)</option><option>AB positive (AB+)</option><option>AB negative (AB-)</option><option>O negative (O-)</option></select></div>
+        <div class="field"><label>Last donation date</label><input type="date" class="input"></div>
+        <div class="field"><label>Availability <span class="req">*</span></label><select class="input"><option>Open to requests</option><option>Available on weekends</option><option>Not available now</option></select></div>
+      </div>
+      <div class="grid-3">
+        <div class="field"><label>City <span class="req">*</span></label><select class="input" required><option selected>Bengaluru</option><option>Delhi</option><option>Mumbai</option><option>Pune</option><option>Chennai</option><option>Kolkata</option><option>Lucknow</option></select></div>
+        <div class="field"><label>Area / locality <span class="req">*</span></label><input class="input" value="Indiranagar" required></div>
+        <div class="field"><label>PIN code <span class="req">*</span></label><input class="input" value="560038" pattern="[0-9]{6}" required></div>
+      </div>
+      <div class="warn"><strong>Not sure about your blood group or donation history?</strong>Only enter details you know. A donation center will confirm your blood group and assess eligibility. Leave the last donation date blank if this is your first donation.</div>
+    </div>
+    <div class="sec">
+      <div class="sec-head"><span class="no">03</span><h3>Contact preferences &amp; consent</h3></div>
+      <div class="grid-2"><label class="check"><input type="checkbox" checked> Contact me by phone</label><label class="check"><input type="checkbox"> Send me email updates</label></div>
+      <label class="check"><input type="checkbox" checked required> I consent to sharing my name, blood group, locality and contact number with authorized care coordinators for donation requests. I can change my availability at any time.</label>
+    </div>
+    <div class="form-foot"><span class="small-muted">Your profile is visible after review.</span>
+      <div class="btns"><button type="button" class="btn btn-outline">Save draft</button><button class="btn btn-primary">Submit donor profile &rarr;</button></div></div>
+  </form>
+</div><footer class="footer"><span>&copy; 2026 Lifeline. A little of you. A lifeline for someone.</span><span><a href="#">Privacy policy</a><a href="#">Terms of use</a><a href="#">Get support</a></span></footer>
+<script src="script.js"></script>
+</body>
+</html>

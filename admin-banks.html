@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blood banks - Lifeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="logo" href="admin-users.html"><span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M12 2.5c3.2 4.2 6.3 7.3 6.3 11.4a6.3 6.3 0 0 1-12.6 0c0-4.1 3.1-7.2 6.3-11.4z"/></svg></span>lifeline</a><div class="sub">Community admin</div>
+    <nav><a href="#">Overview</a><a href="admin-users.html">Users</a><a href="admin-requests.html">Blood requests</a><a href="admin-review.html">Review queue<span class="count">12</span></a><a href="admin-banks.html" class="active">Blood banks</a><a href="#">Activity log</a><a href="#">Settings</a></nav>
+    <div class="care"><b>Handle with care</b>Access personal information only when needed for community coordination.<br><a href="#"><b>View privacy guidelines &#8599;</b></a></div>
+  </aside>
+  <div class="admin-main">
+    <div class="admin-top"><div class="left">Bengaluru community <span class="live">Live</span></div>
+      <div class="right"><a href="index.html" class="small-muted">View website &#8599;</a><svg class="bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0c0 6 2 7 2 7H4s2-1 2-7zM10 20a2 2 0 0 0 4 0"/></svg><div class="user"><span class="avatar">SK</span><span class="who">Sara Kapoor<small>Administrator</small></span></div></div></div>
+    <div class="admin-body">
+      <div class="admin-title"><div><h1>Blood banks</h1><p>Add banks so receivers can find the nearest one.</p></div></div>
+      
+<form class="add-card"><div class="grid-4">
+  <div><label>Name</label><input class="input" required></div>
+  <div><label>City</label><select class="input"><option>Bengaluru</option><option>Delhi</option><option>Mumbai</option><option>Pune</option><option>Chennai</option><option>Kolkata</option><option>Lucknow</option></select></div>
+  <div><label>Address</label><input class="input" required></div>
+  <div><label>Phone</label><input class="input" required></div></div>
+  <button class="btn btn-primary">Save blood bank</button></form>
+<div class="panel"><div class="table-wrap"><table class="data"><thead><tr><th>Name</th><th>City</th><th>Address</th><th>Phone</th><th>Action</th></tr></thead><tbody><tr><td><b>Manipal Blood Centre</b></td><td>Bengaluru</td><td>98 Old Airport Road</td><td>080 2502 4444</td><td><button class="btn btn-outline btn-sm">Edit</button> <button class="btn btn-outline btn-sm">Delete</button></td></tr><tr><td><b>Red Cross Blood Bank</b></td><td>Bengaluru</td><td>Race Course Road</td><td>080 2226 1234</td><td><button class="btn btn-outline btn-sm">Edit</button> <button class="btn btn-outline btn-sm">Delete</button></td></tr><tr><td><b>Lifeline Hospital Bank</b></td><td>Bengaluru</td><td>7 Church Street</td><td>080 2559 7788</td><td><button class="btn btn-outline btn-sm">Edit</button> <button class="btn btn-outline btn-sm">Delete</button></td></tr></tbody></table></div></div>
+    </div>
+    <div class="admin-note">Restricted admin access. Account credentials are never displayed. All community management actions are logged.</div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
