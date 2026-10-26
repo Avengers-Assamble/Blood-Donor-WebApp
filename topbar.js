@@ -33,6 +33,10 @@ async function setupTopbar() {
   if (parts.length > 1) initials = initials + parts[parts.length - 1][0];
   initials = initials.toUpperCase();
 
+  // welcome line on the home page (does nothing on other pages)
+  var welcome = document.getElementById("welcomeName");
+  if (welcome) welcome.textContent = ", " + parts[0];
+
   // fill the existing user box, or make one
   var userBox = right.querySelector(".user");
   if (!userBox) {
