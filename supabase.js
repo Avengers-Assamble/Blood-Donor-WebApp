@@ -1,0 +1,3 @@
+const SUPABASE_URL = 'PASTE_PROJECT_URL';
+const SUPABASE_KEY = 'PASTE_ANON_KEY';
+const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
