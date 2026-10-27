@@ -41,8 +41,8 @@ In progress / planned:
 
 | Member | Owns | Files in this repo |
 |---|---|---|
-| Himangshu | Database, deployment, integration. Supabase tables and security rules, seed data, GitHub repo and Pages, merging everyone's work, final testing | `supabase.js`, `auth.js`, `register.js`, `login.js`, `topbar.js`, `admin pages` |
-| Aarohi | Landing page and overall look. Shared colors, fonts, navbar, footer, hero section | `index.html`, `home.html`, `style.css`, `Hero.jpg` |
+| Himangshu | Database, deployment, integration. Supabase tables and security rules, seed data, GitHub repo and Pages, merging everyone's work, final testing | `supabase.js`, `auth.js`,  `login.js`, `topbar.js`, `admin pages` |
+| Aarohi | Landing page and overall look. Shared colors, fonts, navbar, footer, hero section | `index.html`, `home.html`, `style.css`, `Hero.jpg`, `register.js` |
 | Ankita | Donor registration. The donor form, validation, success and error messages | `donor-profile.html`, `donor.js` |
 | Afrida | Receiving blood. The blood request form and results | `receiver-profile.html`, `receiver.js` |
 | Bisakha | Information pages and content. How and where to donate, FAQ, donation centers list | `banks.html`, information sections of `index.html` |
