@@ -7,7 +7,7 @@ function showMessage(text) {
   msg.style.color = '#b42318';
 }
 
-// already signed in? skip the form
+
 db.auth.getSession().then(({ data }) => {
   if (data.session) window.location.replace('home.html');
 });
@@ -30,7 +30,7 @@ form.addEventListener('submit', async (e) => {
     return;
   }
 
-  // admins go to the admin area, everyone else to home
+  
   const { data: profile } = await db.from('profiles')
     .select('role').eq('id', data.user.id).single();
 
