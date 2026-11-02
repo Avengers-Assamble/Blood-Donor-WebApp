@@ -24,7 +24,11 @@ form.addEventListener('submit', async (e) => {
   const { data, error } = await db.auth.signInWithPassword({ email, password });
 
   if (error) {
-    showMessage('Incorrect email or password.');
+    if (/confirm/i.test(error.message)) {
+      showMessage('Please confirm your email first, then sign in.');
+    } else {
+      showMessage('Incorrect email or password.');
+    }
     btn.disabled = false;
     btn.innerHTML = 'Sign in &rarr;';
     return;
