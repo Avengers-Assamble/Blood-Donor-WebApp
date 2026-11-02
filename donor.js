@@ -13,7 +13,8 @@ function showMessage(text, isError) {
 
 async function startPage() {
   // guard: sends to login if not logged in
-  await requireLogin();
+  var session = await requireLogin();
+  if (!session) return;
 
   var result = await db.auth.getUser();
   if (!result.data.user) return;
