@@ -70,6 +70,28 @@ form.addEventListener("submit", async function (e) {
   else if (phoneOn) contactPref = "phone";
   else if (emailOn) contactPref = "email";
 
+  // basic sanity checks on dates
+  var todayStr = new Date().toISOString().split("T")[0];
+  var dobStr = document.getElementById("dob").value;
+  var lastStr = document.getElementById("lastDonation").value;
+  var dobDate = new Date(dobStr);
+  var now = new Date();
+  var age = now.getFullYear() - dobDate.getFullYear();
+  var m = now.getMonth() - dobDate.getMonth();
+  if (m < 0 || (m === 0 && now.getDate() < dobDate.getDate())) age--;
+  if (!dobStr || isNaN(age) || dobStr > todayStr) {
+    showMessage("Please enter a valid date of birth.", true);
+    return;
+  }
+  if (age < 18) {
+    showMessage("You must be at least 18 years old to register as a donor.", true);
+    return;
+  }
+  if (lastStr && lastStr > todayStr) {
+    showMessage("Last donation date cannot be in the future.", true);
+    return;
+  }
+
   var availability = document.getElementById("availability").value;
 
   var row = {
