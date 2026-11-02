@@ -2,7 +2,10 @@
 
 async function setupTopbar() {
   var right = document.querySelector(".topbar .right");
-  if (!right) return;
+  if (!right) {
+    await setupAdminBar();
+    return;
+  }
 
   var result = await db.auth.getSession();
   var session = result.data.session;
@@ -68,6 +71,38 @@ async function setupTopbar() {
   btn.style.marginLeft = "12px";
   btn.addEventListener("click", logout);
   right.appendChild(btn);
+}
+
+// admin pages use a different bar (.admin-top) with a hard-coded name and no logout
+async function setupAdminBar() {
+  var bar = document.querySelector(".admin-top .right");
+  if (!bar) return;
+
+  var result = await db.auth.getSession();
+  var session = result.data.session;
+  if (!session) return;
+
+  var p = await db.from("profiles")
+    .select("full_name")
+    .eq("id", session.user.id)
+    .maybeSingle();
+  var name = (p.data && p.data.full_name) ? p.data.full_name : session.user.email;
+
+  var parts = name.trim().split(" ");
+  var initials = parts[0][0];
+  if (parts.length > 1) initials = initials + parts[parts.length - 1][0];
+
+  var avatar = bar.querySelector(".avatar");
+  if (avatar) avatar.textContent = initials.toUpperCase();
+  var who = bar.querySelector(".who");
+  if (who && who.firstChild) who.firstChild.textContent = name;
+
+  var out = document.createElement("button");
+  out.type = "button";
+  out.className = "btn btn-outline btn-sm";
+  out.textContent = "Log out";
+  out.addEventListener("click", logout);
+  bar.appendChild(out);
 }
 
 setupTopbar();
