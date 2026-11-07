@@ -13,47 +13,6 @@
   --grey: #6F6A64; --grey-bg: #ECE8E0;
   --radius: 10px;
 }
-
-.drop-loader {
-  width: 75px;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.drop-loader .drop {
-  width: 48px;
-  height: 48px;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-  background: linear-gradient(135deg, #ff6b6b 0%, var(--wine) 55%, var(--wine-dark) 100%);
-  box-shadow: 0 4px 14px rgba(164, 52, 63, 0.45),
-              inset -4px -4px 8px rgba(0, 0, 0, 0.25),
-              inset 3px 3px 6px rgba(255, 255, 255, 0.35);
-  position: relative;
-  animation: drop-pulse 1.3s ease-in-out infinite;
-}
-
-.drop-loader .drop::after {
-  content: '';
-  position: absolute;
-  top: 11px;
-  left: 9px;
-  width: 9px;
-  height: 13px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.55);
-  filter: blur(1px);
-  transform: rotate(-20deg);
-}
-
-@keyframes drop-pulse {
-  0%, 100% { transform: rotate(-45deg) scale(1); }
-  50%      { transform: rotate(-45deg) scale(0.86); }
-}
-
-
 * { box-sizing: border-box; }
 body { margin: 0; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; color: var(--ink); background: var(--cream); font-size: 14px; line-height: 1.5; }
 a { color: var(--wine); text-decoration: none; }
